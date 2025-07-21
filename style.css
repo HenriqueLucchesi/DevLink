@@ -1,6 +1,4 @@
-
 :root {
-  /* MODO ESCURO = padrão */
   --bg-color: #0d1117;
   --text-color: #f0f6fc;
   --accent-color: #3b82f6;
@@ -9,14 +7,12 @@
 }
 
 .light {
-  /* MODO CLARO = quando classe "light" estiver no <html> */
   --bg-color: #ffffff;
   --text-color: #000000;
   --accent-color: #4f46e5;
   --card-color: #f3f4f6;
   --border-color: #d1d5db;
 }
-
 
 * {
   margin: 0;
@@ -36,20 +32,21 @@ body {
   margin: 60px auto;
   padding: 20px;
   text-align: center;
-  animation: fadeInUp 0.8s ease-out;
 }
 
 #language-bar {
   margin-bottom: 20px;
-
   display: flex;
   justify-content: center;
   transform: translate(40%, -200%);
+  position: relative;
+  z-index: 10;
 }
-
 
 .language-selector-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .dropbtn {
@@ -61,6 +58,8 @@ body {
   align-items: center;
   gap: 8px;
   font-weight: 500;
+  position: relative;
+  z-index: 11;
 }
 
 .dropbtn .flag {
@@ -77,11 +76,11 @@ body {
   border: 1px solid var(--border-color);
   padding: 8px 0;
   border-radius: 8px;
-  z-index: 100;
-  width: 180px;
-  margin-top: 8px;
+  z-index: 9999;
+  width: max-content;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
-
 
 .dropdown-content a {
   display: flex;
@@ -96,6 +95,16 @@ body {
 .dropdown-content a:hover {
   background-color: var(--border-color);
 }
+
+.show {
+  display: block;
+}
+
+#profile {
+  position: relative;
+  z-index: 1;
+}
+
 .profile-pic-wrapper {
   width: 140px;
   height: 140px;
@@ -106,7 +115,6 @@ body {
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto;
-  animation: fadeInUp 0.5s ease-out;
 }
 
 .profile-pic-wrapper img {
@@ -114,15 +122,13 @@ body {
   height: 305%;
   object-fit: cover;
   object-position: center;
- transform: translate(2.4%, 5%);
+  transform: translate(2.4%, 5%);
 }
-
 
 #profile p {
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: 600;
-  animation: fadeInUp 0.7s ease-out;
 }
 
 #switch {
@@ -170,7 +176,6 @@ ul li a {
   color: var(--text-color);
   font-weight: 500;
   transition: background 0.2s, transform 0.2s;
-  animation: fadeInUp 0.8s ease-out;
 }
 
 ul li a:hover {
@@ -184,7 +189,6 @@ ul li a:hover {
   justify-content: center;
   gap: 16px;
   margin-bottom: 20px;
-  animation: fadeInUp 1s ease-out;
 }
 
 #social-links a {
@@ -198,25 +202,29 @@ ul li a:hover {
   color: var(--accent-color);
 }
 
-footer {
-  font-size: 0.85rem;
-  opacity: 0.6;
-  margin-bottom: 10px;
-}
-
-/* Animação */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@media (max-width: 425px) {
+  #container {
+    width: 90%;
+    padding: 10px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* Mostrar o dropdown */
-.show {
-  display: block;
+  #language-bar {
+    transform: translate(0, -200%);
+  }
+
+  .profile-pic-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-pic-wrapper img {
+    width: 350%;
+    height: 350%;
+    transform: translate(3, 2%);
+  }
+
+  ul li a {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }

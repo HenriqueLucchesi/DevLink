@@ -6,69 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DevLinks</title>
 
-  <!-- Fonte Inter do Google -->
+  <!-- Fonte Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  
-  <!-- Seu CSS -->
-  <link rel="stylesheet" href="./style.css" />
-  
-  <!-- Ionicons para os ícones das redes sociais -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-<div id="container">
-
-  <!-- MOVER IDIOMA AQUI -->
-  <div id="language-bar">
-    <div class="language-selector-wrapper">
-      <button class="dropbtn" onclick="toggleLangDropdown()">
-        <img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" />
-        <span id="current-lang">PT-BR</span>
-      </button>
-      <div id="lang-menu" class="dropdown-content">
-        <a href="#" onclick="selectLanguage('pt-BR')"><img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" /> Português (BR)</a>
-        <a href="#" onclick="selectLanguage('en-US')"><img class="flag" src="https://flagcdn.com/w20/us.png" alt="EN" /> English (US)</a>
-        <a href="#" onclick="selectLanguage('es-ES')"><img class="flag" src="https://flagcdn.com/w20/es.png" alt="ES" /> Español (ES)</a>
-        <a href="#" onclick="selectLanguage('fr-FR')"><img class="flag" src="https://flagcdn.com/w20/fr.png" alt="FR" /> Français (FR)</a>
-        <a href="#" onclick="selectLanguage('zh-CN')"><img class="flag" src="https://flagcdn.com/w20/cn.png" alt="ZH" /> 中文 (简体)</a>
-        <a href="#" onclick="selectLanguage('hi-IN')"><img class="flag" src="https://flagcdn.com/w20/in.png" alt="HI" /> हिन्दी (भारत)</a>
-        <a href="#" onclick="selectLanguage('ru-RU')"><img class="flag" src="https://flagcdn.com/w20/ru.png" alt="RU" /> Русский</a>
+  <div id="container">
+    
+    <!-- Barra de idioma -->
+    <div id="language-bar">
+      <div class="language-selector-wrapper">
+        <button class="dropbtn" onclick="toggleLangDropdown()">
+          <img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" />
+          <span id="current-lang">PT-BR</span>
+        </button>
+        <div id="lang-menu" class="dropdown-content">
+          <a href="#" onclick="selectLanguage('pt-BR')"><img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" /> Português (BR)</a>
+          <a href="#" onclick="selectLanguage('en-US')"><img class="flag" src="https://flagcdn.com/w20/us.png" alt="EN" /> English (US)</a>
+          <a href="#" onclick="selectLanguage('es-ES')"><img class="flag" src="https://flagcdn.com/w20/es.png" alt="ES" /> Español (ES)</a>
+          <a href="#" onclick="selectLanguage('fr-FR')"><img class="flag" src="https://flagcdn.com/w20/fr.png" alt="FR" /> Français (FR)</a>
+          <a href="#" onclick="selectLanguage('zh-CN')"><img class="flag" src="https://flagcdn.com/w20/cn.png" alt="ZH" /> 中文 (简体)</a>
+          <a href="#" onclick="selectLanguage('hi-IN')"><img class="flag" src="https://flagcdn.com/w20/in.png" alt="HI" /> हिन्दी (भारत)</a>
+          <a href="#" onclick="selectLanguage('ru-RU')"><img class="flag" src="https://flagcdn.com/w20/ru.png" alt="RU" /> Русский</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Perfil -->
-  <div id="profile">
-    <div class="profile-pic-wrapper">
-      <img src="eu/eu.png" alt="Foto de perfil de Henrique Lucchesi Oliveira" />
+    <!-- Perfil -->
+    <div id="profile">
+      <div class="profile-pic-wrapper">
+        <img src="eu/eu.png" alt="Foto de perfil de Henrique Lucchesi Oliveira" />
+      </div>
+      <p>Henrique Lucchesi Oliveira</p>
     </div>
-    <p>Henrique Lucchesi Oliveira</p>
-  </div>
 
-
-    <!-- Botão de tema (clique para alternar claro/escuro) -->
+    <!-- Botão de tema -->
     <div id="switch" onclick="toggleMode()">
       <button></button>
     </div>
 
     <!-- Links -->
     <ul>
-      <li><a id="link-portfolio" href="https://henriquelucchesi.github.io/Meu-portfolio/" target="_blank" rel="external">Ver meu portfólio</a></li>
-      <li><a id="link-certificates" href="https://henriquelucchesi.github.io/Certificados/" target="_blank" rel="external">Meus Certificados</a></li>
+      <li><a id="link-portfolio" href="https://henriquelucchesi.github.io/Meu-portfolio/" target="_blank">Ver meu portfólio</a></li>
+      <li><a id="link-certificates" href="https://henriquelucchesi.github.io/Certificados/" target="_blank">Meus Certificados</a></li>
     </ul>
 
-    <!-- Redes Sociais -->
+    <!-- Redes sociais -->
     <div id="social-links">
-      <a href="https://github.com/HenriqueLucchesi" target="_blank" rel="external"><ion-icon name="logo-github"></ion-icon></a>
-      <a href="https://www.instagram.com/henriquelucchesioliveira/" target="_blank" rel="external"><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href="https://www.linkedin.com/in/henrique-lucchesi-oliveira-23786a367/" target="_blank" rel="external"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="https://github.com/HenriqueLucchesi" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="https://www.instagram.com/henriquelucchesioliveira/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/henrique-lucchesi-oliveira-23786a367/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
     </div>
 
     <!-- Rodapé -->
-    <footer>
-      Feito por Henrique Lucchesi Oliveira
-    </footer>
+    <footer>Feito por Henrique Lucchesi Oliveira</footer>
   </div>
 
   <!-- Seu script.js -->
