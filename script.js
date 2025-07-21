@@ -50,9 +50,11 @@ function selectLanguage(lang) {
 
 // Fechar dropdown ao clicar fora
 window.addEventListener("click", function (e) {
-  const dropdown = document.querySelector(".dropdown")
-  if (!dropdown.contains(e.target)) {
-    document.getElementById("lang-menu").style.display = "none"
+  const button = document.querySelector(".dropbtn")
+  const menu = document.getElementById("lang-menu")
+
+  if (!button.contains(e.target) && !menu.contains(e.target)) {
+    menu.style.display = "none"
   }
 })
 

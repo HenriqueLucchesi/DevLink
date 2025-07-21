@@ -17,34 +17,35 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-  <div id="container">
+<div id="container">
 
-    <!-- Barra de idioma -->
-    <div id="language-bar">
-      <div class="language-selector-wrapper">
-        <button class="dropbtn" onclick="toggleLangDropdown()">
-          <img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" />
-          <span id="current-lang">PT-BR</span>
-        </button>
-        <div id="lang-menu" class="dropdown-content">
-          <a href="#" onclick="selectLanguage('pt-BR')"><img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" /> Português (BR)</a>
-          <a href="#" onclick="selectLanguage('en-US')"><img class="flag" src="https://flagcdn.com/w20/us.png" alt="EN" /> English (US)</a>
-          <a href="#" onclick="selectLanguage('es-ES')"><img class="flag" src="https://flagcdn.com/w20/es.png" alt="ES" /> Español (ES)</a>
-          <a href="#" onclick="selectLanguage('fr-FR')"><img class="flag" src="https://flagcdn.com/w20/fr.png" alt="FR" /> Français (FR)</a>
-          <a href="#" onclick="selectLanguage('zh-CN')"><img class="flag" src="https://flagcdn.com/w20/cn.png" alt="ZH" /> 中文 (简体)</a>
-          <a href="#" onclick="selectLanguage('hi-IN')"><img class="flag" src="https://flagcdn.com/w20/in.png" alt="HI" /> हिन्दी (भारत)</a>
-          <a href="#" onclick="selectLanguage('ru-RU')"><img class="flag" src="https://flagcdn.com/w20/ru.png" alt="RU" /> Русский</a>
-        </div>
+  <!-- MOVER IDIOMA AQUI -->
+  <div id="language-bar">
+    <div class="language-selector-wrapper">
+      <button class="dropbtn" onclick="toggleLangDropdown()">
+        <img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" />
+        <span id="current-lang">PT-BR</span>
+      </button>
+      <div id="lang-menu" class="dropdown-content">
+        <a href="#" onclick="selectLanguage('pt-BR')"><img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" /> Português (BR)</a>
+        <a href="#" onclick="selectLanguage('en-US')"><img class="flag" src="https://flagcdn.com/w20/us.png" alt="EN" /> English (US)</a>
+        <a href="#" onclick="selectLanguage('es-ES')"><img class="flag" src="https://flagcdn.com/w20/es.png" alt="ES" /> Español (ES)</a>
+        <a href="#" onclick="selectLanguage('fr-FR')"><img class="flag" src="https://flagcdn.com/w20/fr.png" alt="FR" /> Français (FR)</a>
+        <a href="#" onclick="selectLanguage('zh-CN')"><img class="flag" src="https://flagcdn.com/w20/cn.png" alt="ZH" /> 中文 (简体)</a>
+        <a href="#" onclick="selectLanguage('hi-IN')"><img class="flag" src="https://flagcdn.com/w20/in.png" alt="HI" /> हिन्दी (भारत)</a>
+        <a href="#" onclick="selectLanguage('ru-RU')"><img class="flag" src="https://flagcdn.com/w20/ru.png" alt="RU" /> Русский</a>
       </div>
     </div>
-
-      <!-- Perfil -->
-  <div id="profile">
-  <div class="profile-pic-wrapper">
-    <img src="eu/eu.png" alt="Foto de perfil de Henrique Lucchesi Oliveira" />
   </div>
-  <p>Henrique Lucchesi Oliveira</p>
-</div>
+
+  <!-- Perfil -->
+  <div id="profile">
+    <div class="profile-pic-wrapper">
+      <img src="eu/eu.png" alt="Foto de perfil de Henrique Lucchesi Oliveira" />
+    </div>
+    <p>Henrique Lucchesi Oliveira</p>
+  </div>
+
 
     <!-- Botão de tema (clique para alternar claro/escuro) -->
     <div id="switch" onclick="toggleMode()">

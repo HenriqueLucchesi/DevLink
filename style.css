@@ -40,10 +40,13 @@ body {
 }
 
 #language-bar {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  transform: translate(40%, -200%);
 }
+
 
 .language-selector-wrapper {
   position: relative;
@@ -67,14 +70,18 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--card-color);
   border: 1px solid var(--border-color);
   padding: 8px 0;
   border-radius: 8px;
   z-index: 100;
   width: 180px;
+  margin-top: 8px;
 }
+
 
 .dropdown-content a {
   display: flex;
