@@ -1,12 +1,14 @@
-// MODO CLARO / ESCURO
+// Alternar tema claro/escuro
 function toggleMode() {
   const html = document.documentElement
   html.classList.toggle("light")
 
-  const img = document.querySelector("#profile img")
-
-  // Substituir a imagem (aqui você pode colocar outra imagem caso queira para light mode)
-  img.setAttribute("src", "eu/eu.png")
+  // Salvar preferência no localStorage
+  if (html.classList.contains("light")) {
+    localStorage.setItem("theme", "light")
+  } else {
+    localStorage.setItem("theme", "dark")
+  }
 }
 
 // MENU DE IDIOMAS
@@ -19,47 +21,34 @@ function selectLanguage(lang) {
   const label = document.getElementById("current-lang")
   const flag = document.querySelector(".dropbtn img")
 
-  if (lang === "pt-BR") {
-    label.textContent = "PT-BR"
-    flag.src = "https://flagcdn.com/w20/br.png"
-    flag.alt = "PT"
-  } else if (lang === "en-US") {
-    label.textContent = "EN-US"
-    flag.src = "https://flagcdn.com/w20/us.png"
-    flag.alt = "EN"
-  } else if (lang === "es-ES") {
-    label.textContent = "ES-ES"
-    flag.src = "https://flagcdn.com/w20/es.png"
-    flag.alt = "ES"
-  } else if (lang === "fr-FR") {
-    label.textContent = "FR-FR"
-    flag.src = "https://flagcdn.com/w20/fr.png"
-    flag.alt = "FR"
-  } else if (lang === "zh-CN") {
-    label.textContent = "ZH-CN"
-    flag.src = "https://flagcdn.com/w20/cn.png"
-    flag.alt = "ZH"
-  } else if (lang === "hi-IN") {
-    label.textContent = "HI-IN"
-    flag.src = "https://flagcdn.com/w20/in.png"
-    flag.alt = "HI"
-  } else if (lang === "ru-RU") {
-    label.textContent = "RU-RU"
-    flag.src = "https://flagcdn.com/w20/ru.png"
-    flag.alt = "RU"
+  // Atualiza bandeira e texto
+  const langs = {
+    "pt-BR": ["PT-BR", "br", "PT"],
+    "en-US": ["EN-US", "us", "EN"],
+    "es-ES": ["ES-ES", "es", "ES"],
+    "fr-FR": ["FR-FR", "fr", "FR"],
+    "zh-CN": ["ZH-CN", "cn", "ZH"],
+    "hi-IN": ["HI-IN", "in", "HI"],
+    "ru-RU": ["RU-RU", "ru", "RU"],
   }
-  
-  // Atualizar textos da página
+
+  if (langs[lang]) {
+    label.textContent = langs[lang][0]
+    flag.src = `https://flagcdn.com/w20/${langs[lang][1]}.png`
+    flag.alt = langs[lang][2]
+  }
+
+  // Atualiza os textos
   updateTexts(lang)
 
-  // Fechar menu
+  // Fecha o menu
   document.getElementById("lang-menu").style.display = "none"
 
-  // Salvar idioma selecionado
+  // Salva idioma
   localStorage.setItem("selectedLang", lang)
 }
 
-// FECHAR DROPDOWN AO CLICAR FORA
+// Fechar dropdown ao clicar fora
 window.addEventListener("click", function (e) {
   const dropdown = document.querySelector(".dropdown")
   if (!dropdown.contains(e.target)) {
@@ -67,7 +56,7 @@ window.addEventListener("click", function (e) {
   }
 })
 
-// TEXTOS EM DIFERENTES IDIOMAS
+// TEXTOS em diferentes idiomas
 const translations = {
   "pt-BR": {
     portfolio: "Ver meu portfólio",
@@ -106,6 +95,7 @@ const translations = {
   },
 }
 
+// Aplicar os textos traduzidos
 function updateTexts(lang) {
   const t = translations[lang]
   if (!t) return
@@ -115,8 +105,15 @@ function updateTexts(lang) {
   document.querySelector("footer").textContent = t.footer
 }
 
-// APLICAR IDIOMA SALVO AUTOMATICAMENTE AO CARREGAR
+// Ao carregar a página, aplica tema e idioma salvos
 window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme")
+  if (savedTheme === "light") {
+    document.documentElement.classList.add("light")
+  } else {
+    document.documentElement.classList.remove("light")
+  }
+
   const savedLang = localStorage.getItem("selectedLang") || "pt-BR"
   selectLanguage(savedLang)
 })

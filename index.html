@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevLinks</title>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevLinks</title>
 
-    <!-- Fontes e Estilo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+  <!-- Fonte Inter do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="./style.css" />
+  
+  <!-- Ionicons para os ícones das redes sociais -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div id="container">
 
-  <body>
-    <div id="container">
-  <!-- Barra de idioma posicionada corretamente -->
-  <div id="language-bar">
-    <div class="language-selector-wrapper">
-      <div class="dropdown">
+    <!-- Barra de idioma -->
+    <div id="language-bar">
+      <div class="language-selector-wrapper">
         <button class="dropbtn" onclick="toggleLangDropdown()">
           <img class="flag" src="https://flagcdn.com/w20/br.png" alt="PT" />
           <span id="current-lang">PT-BR</span>
@@ -34,45 +37,40 @@
         </div>
       </div>
     </div>
-  </div>
-
 
       <!-- Perfil -->
-      <div id="profile">
-        <img src="eu/eu.png" alt="Foto de perfil de Henrique Lucchesi Oliveira" />
-        <p>Henrique Lucchesi Oliveira</p>
-      </div>
+  <div id="profile">
+  <div class="profile-pic-wrapper">
+    <img src="eu/eu.png" alt="Foto de perfil de Henrique Lucchesi Oliveira" />
+  </div>
+  <p>Henrique Lucchesi Oliveira</p>
+</div>
 
-      <!-- Botão de tema -->
-      <div id="switch" onclick="toggleMode()">
-        <button></button>
-        <span></span>
-      </div>
-
-      <!-- Links -->
-      <ul>
-        <li><a id="link-portfolio" href="https://henriquelucchesi.github.io/Meu-portfolio/" target="_blank" rel="external">Ver meu portfólio</a></li>
-        <li><a id="link-certificates" href="https://henriquelucchesi.github.io/Certificados/" target="_blank" rel="external">Meus Certificados</a></li>
-      </ul>
-
-      <!-- Redes Sociais -->
-      <div id="social-links">
-        <a href="https://github.com/HenriqueLucchesi" target="_blank" rel="external"><ion-icon name="logo-github"></ion-icon></a>
-        <a href="https://www.instagram.com/henriquelucchesioliveira/" target="_blank" rel="external"><ion-icon name="logo-instagram"></ion-icon></a>
-        <a href="https://www.linkedin.com/in/henrique-lucchesi-oliveira-23786a367/" target="_blank" rel="external"><ion-icon name="logo-linkedin"></ion-icon></a>
-      </div>
-
-      <!-- Rodapé -->
-      <footer>
-        Feito por Henrique Lucchesi Oliveira
-      </footer>
+    <!-- Botão de tema (clique para alternar claro/escuro) -->
+    <div id="switch" onclick="toggleMode()">
+      <button></button>
     </div>
 
-    <!-- Icones -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Links -->
+    <ul>
+      <li><a id="link-portfolio" href="https://henriquelucchesi.github.io/Meu-portfolio/" target="_blank" rel="external">Ver meu portfólio</a></li>
+      <li><a id="link-certificates" href="https://henriquelucchesi.github.io/Certificados/" target="_blank" rel="external">Meus Certificados</a></li>
+    </ul>
 
-    <!-- Script -->
-    <script src="./script.js"></script>
-  </body>
+    <!-- Redes Sociais -->
+    <div id="social-links">
+      <a href="https://github.com/HenriqueLucchesi" target="_blank" rel="external"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="https://www.instagram.com/henriquelucchesioliveira/" target="_blank" rel="external"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/henrique-lucchesi-oliveira-23786a367/" target="_blank" rel="external"><ion-icon name="logo-linkedin"></ion-icon></a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+      Feito por Henrique Lucchesi Oliveira
+    </footer>
+  </div>
+
+  <!-- Seu script.js -->
+  <script src="./script.js"></script>
+</body>
 </html>
