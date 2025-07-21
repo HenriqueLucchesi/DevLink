@@ -52,7 +52,7 @@ function selectLanguage(lang) {
 window.addEventListener("click", function (e) {
   const button = document.querySelector(".dropbtn")
   const menu = document.getElementById("lang-menu")
-
+  
   if (!button.contains(e.target) && !menu.contains(e.target)) {
     menu.style.display = "none"
   }
